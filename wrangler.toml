@@ -9,11 +9,12 @@ compatibility_date = "2025-12-04"
 directory = "./public"
 binding = "ASSETS"
 
-# KV 命名空間(僅需 1 個)
-[[kv_namespaces]]
-binding = "CACHE_KV"
-id = ""  # 運行 npm run setup 後自動填充
-preview_id = ""
+# KV 命名空間 - 可選(首次部署可註釋)
+# 運行 'npx wrangler kv:namespace create CACHE_KV' 後取消註釋並填入 ID
+# [[kv_namespaces]]
+# binding = "CACHE_KV"
+# id = "YOUR_KV_NAMESPACE_ID"
+# preview_id = "YOUR_PREVIEW_KV_ID"
 
 # 環境變數
 [vars]
