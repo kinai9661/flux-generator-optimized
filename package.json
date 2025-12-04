@@ -1,0 +1,21 @@
+{
+  "name": "flux-generator-optimized",
+  "version": "3.0.0",
+  "description": "Optimized FLUX Generator with Free Tier",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:prod": "wrangler deploy --env production",
+    "setup": "bash scripts/setup-kv.sh",
+    "tail": "wrangler tail",
+    "test": "wrangler dev --test",
+    "clean": "rm -rf node_modules .wrangler"
+  },
+  "keywords": ["flux", "ai", "cloudflare-workers", "free-tier", "image-generation"],
+  "author": "kinai9661",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}

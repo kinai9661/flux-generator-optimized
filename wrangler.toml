@@ -1,0 +1,33 @@
+#:schema node_modules/wrangler/config-schema.json
+
+name = "flux-generator-optimized"
+main = "src/index.js"
+compatibility_date = "2025-12-04"
+
+# 靜態資源
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# KV 命名空間(僅需 1 個)
+[[kv_namespaces]]
+binding = "CACHE_KV"
+id = ""  # 運行 npm run setup 後自動填充
+preview_id = ""
+
+# 環境變數
+[vars]
+ENVIRONMENT = "production"
+MAX_IMAGES_PER_USER = "50"
+CACHE_TTL = "3600"
+ENABLE_MONITORING = "true"
+
+# 開發環境
+[env.dev]
+name = "flux-generator-dev"
+vars = { ENVIRONMENT = "development" }
+
+# 生產環境
+[env.production]
+name = "flux-generator-optimized"
+vars = { ENVIRONMENT = "production" }
