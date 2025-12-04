@@ -99,8 +99,7 @@ class FluxWorker extends WorkerBase {
   async handleHealth(request, env, ctx) {
     return this.jsonResponse({
       status: 'ok',
-      timestamp: Date.now(),
-      uptime: process.uptime ? Math.floor(process.uptime()) : 0
+      timestamp: Date.now()
     });
   }
 
