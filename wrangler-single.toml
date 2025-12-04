@@ -1,0 +1,13 @@
+name = "flux-generator-single"
+main = "worker-single.js"
+compatibility_date = "2025-12-04"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[vars]
+ENVIRONMENT = "production"
+
+[env.production]
+name = "flux-generator-single"
